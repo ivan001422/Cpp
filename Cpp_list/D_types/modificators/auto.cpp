@@ -14,6 +14,9 @@
 #include <vector>
 using namespace std;
 
+void f(auto x) {
+	cout << x << '\n';
+
 int main() {
     auto x = 42;                 // int
     auto pi = 3.14159;           // double
@@ -26,6 +29,12 @@ int main() {
     ref = 200;                   // меняет value
     cout << "value = " << value << ", cref = " << cref << '\n';
 
+    auto X = 10; // Об этом подробней в 'шаблоны функций'
+	f(X);
+	auto F = 0.1F;
+	f(F);
+	auto D = 0.2;
+	f(D);
     // Используйте auto только в сложных типах данных, для базовых его применение избыточно.
     return 0;
 }
